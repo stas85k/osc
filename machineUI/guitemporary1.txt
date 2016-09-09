@@ -1,0 +1,37 @@
+            <TabItem Header="Acquisition Settings">
+                <Grid Background="White" Margin="0,0,0,0">
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Height="Auto" Width="400" Margin="27,27,0,0">
+                        
+                        <Label Content="LP Voltmeter Attenuation" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="Auto" Width="Auto"/>
+                        <Slider Name="LPVoltmeterAttenuationSlider" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="Auto" Width="Auto" Margin="2" Value="19.9" Minimum="18" Maximum="22" IsSnapToTickEnabled="True" TickFrequency="0.1" TickPlacement="BottomRight" ValueChanged="parametersChanged" />
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="Auto" Width="Auto">
+			    <TextBlock Text="{Binding Value, ElementName=LPVoltmeterAttenuationSlider}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="Auto" Width="Auto"/>
+			    <Button Content="Calibrate" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="Auto" Width="Auto" />
+                        </StackPanel>
+                        
+                        <Label Content="RP Voltmeter Attenuation" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="Auto" Width="Auto"/>
+                        <Slider Name="RPVoltmeterAttenuationSlider" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="Auto" Width="Auto" Margin="2" Value="19.9" Minimum="18" Maximum="22" IsSnapToTickEnabled="True" TickFrequency="0.1" TickPlacement="BottomRight" ValueChanged="parametersChanged" />
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="Auto" Width="Auto">
+			    <TextBlock Text="{Binding Value, ElementName=RPVoltmeterAttenuationSlider}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="Auto" Width="Auto"/>
+			    <Button Content="Calibrate" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="Auto" Width="Auto" />
+                        </StackPanel>
+                        
+                        <Label Content="Current Meter Shunt Resistance [Ohm]" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="Auto" Width="Auto"/>
+                        <Slider Name="CurrentMeterShuntResistanceSlider" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="Auto" Width="Auto" Margin="2" Value="3.33" Minimum="3" Maximum="3.66" IsSnapToTickEnabled="True" TickFrequency="0.01" TickPlacement="BottomRight" ValueChanged="parametersChanged" />
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="Auto" Width="Auto">
+			    <TextBlock Text="{Binding Value, ElementName=CurrentMeterShuntResistanceSlider}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="Auto" Width="Auto"/>
+			    <Button Content="Calibrate" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="Auto" Width="Auto" />
+                        </StackPanel>
+                        
+                    </StackPanel>
+                    <oxy:Plot x:Name="calibrationview" Title="Coefficients: Blue - Generator Att., Red - LP Vm Att., Green - RP Vm Att., Black - Shunt Imped." Margin="440,27,0,0">
+                        <oxy:Plot.Series>
+                            <oxy:LineSeries Color="Blue"/>
+                            <oxy:LineSeries Color="Red"/>
+                            <oxy:LineSeries Color="Green"/>
+                            <oxy:LineSeries Color="Black"/>
+                        </oxy:Plot.Series>
+                    </oxy:Plot>
+
+                </Grid>
+            </TabItem>

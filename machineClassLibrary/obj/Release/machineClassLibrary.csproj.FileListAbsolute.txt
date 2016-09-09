@@ -1,0 +1,4 @@
+G:\paul\projects\s014296\PICOSCOPEDEVELOPMENT\C#\ex3\machineClassLibrary\bin\Release\machineClassLibrary.dll
+G:\paul\projects\s014296\PICOSCOPEDEVELOPMENT\C#\ex3\machineClassLibrary\bin\Release\machineClassLibrary.pdb
+G:\paul\projects\s014296\PICOSCOPEDEVELOPMENT\C#\ex3\machineClassLibrary\obj\Release\machineClassLibrary.dll
+G:\paul\projects\s014296\PICOSCOPEDEVELOPMENT\C#\ex3\machineClassLibrary\obj\Release\machineClassLibrary.pdb

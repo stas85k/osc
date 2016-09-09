@@ -1,0 +1,72 @@
+        <TabControl x:Name="tabControl" Grid.Column="1" HorizontalAlignment="Stretch" Height="Auto" Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Stretch" Width="Auto">
+            
+
+	    <TabItem Header="TabItem">
+                <Grid Background="#FFE0E0E0"/>
+            </TabItem>
+
+
+
+
+            <TabItem Header="TickSlider">
+                <Grid Background="#FFE5E5E5" Margin="0,6,0,-6">
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Height="Auto" Width="400" Margin="27,27,0,0">
+                        <Label Content="rng  (sub)." HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="Auto" Width="Auto"/>
+                        <Slider Name="mySlider" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="Auto" Width="Auto" Margin="2" Foreground="Blue" Minimum="0" Maximum="100" IsSelectionRangeEnabled="True" SelectionStart="10" SelectionEnd="70" TickPlacement="BottomRight" TickFrequency="10" ValueChanged="mySlider_ValueChanged" />
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="Auto" Width="Auto">
+                            <Label Content="Value:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="20" Width="50" />
+                            <TextBlock Text="{Binding Value, ElementName=mySlider}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="20" Width="50"/>
+                        </StackPanel>
+                    </StackPanel>
+                    <Button x:Name="buttonStartGenerator" Content="Start Generator" HorizontalAlignment="Left" Margin="27,195,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="-0.709,-1.612" Click="buttonStartGenerator_Click"/>
+
+                </Grid>
+	    </TabItem>
+
+
+
+
+            
+            <TabItem Header="Log-Log" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Width="Auto">
+                <Grid Background="#FFE5E5E5">
+                    <!--<oxy:PlotView x:Name="logarithmicview1" Model="{Binding logarichmicscaleplotmodel}"/>-->
+                </Grid>
+            </TabItem>
+
+
+
+
+            <TabItem Header="Lin-Lin" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Width="Auto">
+                <Grid Background="#FFE5E5E5">
+                    <oxy:Plot x:Name="linearview1" Title="linear1 plot">
+                        <oxy:Plot.Series>
+                            <oxy:LineSeries ItemsSource="{Binding p1}"/>
+                        </oxy:Plot.Series>
+                    </oxy:Plot>
+                </Grid>
+            </TabItem>
+            
+
+
+
+	   <TabItem Header="lin lin 2" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Width="Auto">
+                <Grid Background="#FFE5E5E5">
+                    <oxy:Plot x:Name="linearview2" Title="linear1 plot 2">
+                        <oxy:Plot.Series>
+                            <oxy:LineSeries ItemsSource="{Binding p2}"/>
+                        </oxy:Plot.Series>
+                    </oxy:Plot>
+                </Grid>
+            </TabItem>
+
+
+
+
+
+            <TabItem Header="TabItem" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Width="Auto">
+                <Grid Background="#FFE5E5E5" Margin="0,0,-2,0"/>
+            </TabItem>
+
+
+
+        </TabControl>
